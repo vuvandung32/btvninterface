@@ -61,31 +61,30 @@ public class Account implements IAccount {
     @Override
     public void recharge(double amount) {
         // TODO Auto-generated method stub
-        System.out.println("Số tiền nạp vào : "+amount);
-       setAccountBalance(amount+getAccountBalance());
+        System.out.println("Số tiền nạp vào : " + amount);
 
+        setAccountBalance(amount + getAccountBalance());
+
+        displayinfo();
 
     }
 
     @Override
-    public void changeEmail( String Email) {
+    public void changeEmail(String Email) {
         // TODO Auto-generated method stub
-        System.out.println( "emai của bạn : "+ Email);
-        
+
+        System.out.println("emai ban đầu : "+email+"\nemai của bạn sau khi đổi : " + Email);
+        setEmail(Email);
+        displayinfo();
     }
 
     @Override
     public void displayinfo() {
         // TODO Auto-generated method stub
-        System.out.println("tên là : "+ getName());
-        System.out.println("số tài khoản : "+ getAccountNumber());
-        System.out.println("số dư là :  "+getAccountBalance());
+        System.out.println("tên là : " + getName());
+        System.out.println("số tài khoản : " + getAccountNumber());
+        System.out.println("số dư là :  " + getAccountBalance());
 
-        
-        
-        
     }
-
-   
 
 }
